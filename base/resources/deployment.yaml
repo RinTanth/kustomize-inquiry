@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: galgal-user-inquiry
-          image: asia.gcr.io/poc-innovation-iot/training-galgal/galgal-user-inquiry:TAG
+          image: asia.gcr.io/poc-innovation-iot/galgal-user-inquiry:TAG
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:
@@ -29,19 +29,19 @@ spec:
                 name: galgal-user-inquiry-secret-env
           ports:
             - name: http
-              containerPort: 8082
+              containerPort: 8080
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
-              port: 8082
+              path: /health
+              port: 8080
             timeoutSeconds: 10
             initialDelaySeconds: 10
             periodSeconds: 20
           readinessProbe:
             httpGet:
-              path: /
-              port: 8082
+              path: /health
+              port: 8080
             timeoutSeconds: 10
             initialDelaySeconds: 10
             periodSeconds: 15
@@ -53,9 +53,9 @@ spec:
               cpu: 400m
               memory: 256Mi
           volumeMounts:
-            - name: galgal-user-inquiry-configmap-file
-              mountPath: /configs/config.yaml
-              subPath: config.yaml
+            - name: galgal-user-producer-configmap-file
+              mountPath: /config
+              readOnly: true
 
       volumes:
         - name: galgal-user-inquiry-configmap-file

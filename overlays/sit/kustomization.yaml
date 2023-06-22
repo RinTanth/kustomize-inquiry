@@ -7,8 +7,8 @@ resources:
 images:
   - name: asia.gcr.io/poc-innovation-iot/galgal-user-inquiry
     newTag: 0df5a67c
-  - name: asia.gcr.io/poc-innovation-iot/training-kube/galgal-user-inquiry
-    newTag: v1.4
+  # - name: asia.gcr.io/poc-innovation-iot/training-kube/galgal-user-inquiry
+  #   newTag: v1.4
 
 configMapGenerator:
   - behavior: merge
