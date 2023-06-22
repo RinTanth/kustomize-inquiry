@@ -53,7 +53,7 @@ spec:
               cpu: 400m
               memory: 256Mi
           volumeMounts:
-            - name: galgal-user-producer-configmap-file
+            - name: galgal-user-inquiry-configmap-file
               mountPath: /config
               readOnly: true
 
