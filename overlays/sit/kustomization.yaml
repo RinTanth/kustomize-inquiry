@@ -6,7 +6,7 @@ resources:
 
 images:
 - name: asia.gcr.io/poc-innovation-iot/galgal-user-inquiry
-  newTag: e87bc8aa
+  newTag: "84111e69"
 
   # - name: asia.gcr.io/poc-innovation-iot/training-kube/galgal-user-inquiry
   #   newTag: v1.4
