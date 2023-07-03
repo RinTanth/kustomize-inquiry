@@ -24,7 +24,7 @@ redis:
   address: 172.28.241.3:6379
   password:
   database: 0
-  redis-auth-string: $REDIS_AUTH_STRING
+  # redis-auth-string: $REDIS_AUTH_STRING
 
 kafka:
   address:
@@ -32,10 +32,11 @@ kafka:
   topic: gal-topic
 
 user-list-key: USER_LIST
-secrets:
-  db-user: $SECRET_DB_NAME
-  db-password: $SECRET_DB_PASSWORD
-  auth-string: $SECRET_REDIS_AUTH_STRING
+user-total-key: USER_TOTAL
+# secrets:
+#   db-user: $SECRET_DB_NAME
+#   db-password: $SECRET_DB_PASSWORD
+#   auth-string: $SECRET_REDIS_AUTH_STRING
 # db:
 #   host: 172.28.240.42
 #   port: 5432
