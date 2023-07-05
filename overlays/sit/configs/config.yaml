@@ -31,4 +31,4 @@ kafka:
   topic: gal-topic
 
 user-list-key: GALGAL_USER_LIST
-user-total-key: GALGAL_USER_TOTAL3
+user-total-key: GALGAL_USER_TOTAL
